@@ -6,30 +6,94 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>RitaVo Fashion</title>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="css/flexslider.css">
+  <link rel="stylesheet" href="css/lightbox.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+  <script src="js/main.js"></script>
 </head>
-<body>
+<body class="home browser-default">
   <header>
       <div class="top-header">
+        <a href="#" data-activates="slide-main-menu" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
         <a class="logo" href="index.html">
           <img src="img/ritavologo.svg" alt="Trang chủ">
         </a>
         <div class="sub-menu">
           <ul>
-            <li class="search"><a href="#" title="Tìm kiếm">Search</a></li>
+            <li class="search"><a id="search-btn" href="#search-modal" title="Tìm kiếm"><i class="material-icons">search</i></a></li>
             <li class="lang"><a href="#" title="English">EN</a>/<a href="#" title="Tiếng Việt">VN</a></li>
             <li class="user"><a href="#" title="Đăng nhập">Login</a></li>
-            <li class="cart"><a href="#" title="Giỏ hàng"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="text">Giỏ hàng</span> <span class="qty">3</span></a></li>
+            <li class="cart"><a href="#" title="Giỏ hàng"><i class="material-icons">shopping_basket</i> <span class="text">Giỏ hàng</span> <span class="qty">3</span></a></li>
           </ul>
         </div>
       </div>
-      <div class="navigation hidden-xs hidden-sm">
+      <div id="search-modal" class="modal">
+        <div class="modal-content">
+          <nav>
+            <div class="nav-wrapper">
+              <form>
+                <div class="input-field">
+                  <input id="search" type="search" placeholder="Nhập từ khóa cần tìm" required>
+                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                  <i class="material-icons modal-action modal-close">close</i>
+                </div>
+              </form>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- Begin Side-nav -->
+      <ul id="slide-main-menu" class="side-nav">
+        <li>
+          <a class="logo" href="index.html">
+            <img src="img/ritavologo-white.png" alt="Trang chủ">
+          </a>
+        </li>
+        <li>
+          <a href="#" class="waves-effect">Thương hiệu</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Gaudi</a></li>
+            <li><a href="#" class="waves-effect">Tombolini</a></li>
+            <li><a href="#" class="waves-effect">La perla</a></li>
+            <li><a href="#" class="waves-effect">Brunello Cucinelli</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="waves-effect">Thời trang nam</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Áo</a></li>
+            <li><a href="#" class="waves-effect">Quần</a></li>
+            <li><a href="#" class="waves-effect">Phụ kiện</a></li>
+            <li><a href="#" class="waves-effect">Giày</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="waves-effect">Thời trang nữ</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Áo</a></li>
+            <li><a href="#" class="waves-effect">Quần</a></li>
+            <li><a href="#" class="waves-effect">Phụ kiện</a></li>
+            <li><a href="#" class="waves-effect">Giày</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="waves-effect">Sản phẩm bán chạy</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Áo</a></li>
+            <li><a href="#" class="waves-effect">Quần</a></li>
+            <li><a href="#" class="waves-effect">Phụ kiện</a></li>
+            <li><a href="#" class="waves-effect">Giày</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- End Side-nav -->
+      <div class="navigation hide-on-med-and-down">
         <ul class="main-menu">
           <li class="active">
             <a href="#">Thương hiệu</a>
@@ -71,40 +135,28 @@
       </div>
   </header>
   <section class="section-wrap">
-    <div class="slider">
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <img src="https://unsplash.it/1920/700?image=669" alt="...">
-            <div class="carousel-caption">
-            </div>
-          </div>
-          <div class="item">
-            <img src="https://unsplash.it/1920/700?image=628" alt="...">
-            <div class="carousel-caption">
-            </div>
-          </div>
-          <div class="item">
-            <img src="https://unsplash.it/1920/700?image=604" alt="...">
-            <div class="carousel-caption">
-            </div>
-          </div>
-          <div class="item">
-            <img src="https://unsplash.it/1920/700?image=325" alt="...">
-            <div class="carousel-caption">
-            </div>
+    <div id="slider">
+      <div class="carousel carousel-slider"  data-indicators="true">
+        <div class="carousel-item">
+          <img src="https://unsplash.it/1920/700?image=669" alt="...">
+          <div class="carousel-caption">
           </div>
         </div>
-
+        <div class="carousel-item">
+          <img src="https://unsplash.it/1920/700?image=628" alt="...">
+          <div class="carousel-caption">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://unsplash.it/1920/700?image=604" alt="...">
+          <div class="carousel-caption">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://unsplash.it/1920/700?image=325" alt="...">
+          <div class="carousel-caption">
+          </div>
+        </div>
         <!-- Controls -->
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -119,12 +171,12 @@
   </section>
   <section class="section-wrap top-new">
     <div class="container-fluid">
-      <div class="section-title text-center">
+      <div class="section-title center-align">
         <h3>Top 10 sản phẩm mới nhất</h3>
       </div>
-      <div class="product-list">
+      <div class="product-list row">
         <div class="product-item">
-            <div class="product-wrap">
+            <div class="product-wrap hoverable">
               <a href="#" class="product-img"><img src="assets/men/1.jpg" alt=""></a>
               <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
               <div class="product-price">540.000 <sup>VNĐ</sup></div>
@@ -132,7 +184,7 @@
             </div>
         </div>
         <div class="product-item">
-            <div class="product-wrap">
+            <div class="product-wrap hoverable">
               <span class="sale-badge">-10%</span>
               <a href="#" class="product-img"><img src="assets/women/1.jpg" alt=""></a>
               <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
@@ -141,7 +193,7 @@
             </div>
         </div>
         <div class="product-item">
-            <div class="product-wrap">
+            <div class="product-wrap hoverable">
               <a href="#" class="product-img"><img src="assets/men/2.jpg" alt=""></a>
               <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
               <div class="product-price">540.000 <sup>VNĐ</sup></div>
@@ -149,7 +201,7 @@
             </div>
         </div>
         <div class="product-item">
-            <div class="product-wrap">
+            <div class="product-wrap hoverable">
               <a href="#" class="product-img"><img src="assets/women/2.jpg" alt=""></a>
               <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
               <div class="product-price">540.000 <sup>VNĐ</sup></div>
@@ -157,7 +209,7 @@
             </div>
         </div>
         <div class="product-item">
-            <div class="product-wrap">
+            <div class="product-wrap hoverable">
               <a href="#" class="product-img"><img src="assets/men/3.jpg" alt=""></a>
               <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
               <div class="product-price">540.000 <sup>VNĐ</sup></div>
@@ -165,7 +217,7 @@
             </div>
         </div>
         <div class="product-item">
-            <div class="product-wrap">
+            <div class="product-wrap hoverable">
               <a href="#" class="product-img"><img src="assets/women/3.jpg" alt=""></a>
               <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
               <div class="product-price">540.000 <sup>VNĐ</sup></div>
@@ -173,7 +225,7 @@
             </div>
         </div>
         <div class="product-item">
-            <div class="product-wrap">
+            <div class="product-wrap hoverable">
               <span class="sale-badge">-10%</span>
               <a href="#" class="product-img"><img src="assets/men/4.jpg" alt=""></a>
               <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
@@ -182,7 +234,7 @@
             </div>
         </div>
         <div class="product-item">
-            <div class="product-wrap">
+            <div class="product-wrap hoverable">
               <a href="#" class="product-img"><img src="assets/women/4.jpg" alt=""></a>
               <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
               <div class="product-price">540.000 <sup>VNĐ</sup></div>
@@ -190,7 +242,7 @@
             </div>
         </div>
         <div class="product-item">
-            <div class="product-wrap">
+            <div class="product-wrap hoverable">
               <a href="#" class="product-img"><img src="assets/men/5.jpg" alt=""></a>
               <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
               <div class="product-price">540.000 <sup>VNĐ</sup></div>
@@ -198,7 +250,7 @@
             </div>
         </div>
         <div class="product-item">
-            <div class="product-wrap">
+            <div class="product-wrap hoverable">
               <a href="#" class="product-img"><img src="assets/women/5.jpg" alt=""></a>
               <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
               <div class="product-price">540.000 <sup>VNĐ</sup></div>
@@ -210,118 +262,131 @@
   </section>
   <section class="section-wrap top-best">
     <div class="container-fluid">
-      <div class="section-title text-center">
+      <div class="section-title center-align">
         <h3>Top 5 sản phẩm bán chạy nhất</h3>
       </div>
-      <div class="section-list">
-        <div class="product-list">
-          <div class="product-item">
-              <div class="product-wrap">
-                <span class="sale-badge">-10%</span>
-                <a href="#" class="product-img"><img src="assets/men/6.jpg" alt=""></a>
-                <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
-                <div class="product-price">540.000 <sup>VNĐ</sup></div>
-                <div class="product-sub-price"><del>600.000 VNĐ</del></div>
-              </div>
-          </div>
-          <div class="product-item">
-              <div class="product-wrap">
-                <span class="sale-badge">-10%</span>
-                <a href="#" class="product-img"><img src="assets/women/6.jpg" alt=""></a>
-                <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
-                <div class="product-price">540.000 <sup>VNĐ</sup></div>
-                <div class="product-sub-price"><del>600.000 VNĐ</del></div>
-              </div>
-          </div>
-          <div class="product-item">
-              <div class="product-wrap">
-                <a href="#" class="product-img"><img src="assets/men/7.jpg" alt=""></a>
-                <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
-                <div class="product-price">540.000 <sup>VNĐ</sup></div>
-                <div class="product-sub-price"><del>600.000 VNĐ</del></div>
-              </div>
-          </div>
-          <div class="product-item">
-              <div class="product-wrap">
-                <a href="#" class="product-img"><img src="assets/women/7.jpg" alt=""></a>
-                <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
-                <div class="product-price">540.000 <sup>VNĐ</sup></div>
-                <div class="product-sub-price"><del>600.000 VNĐ</del></div>
-              </div>
-          </div>
-          <div class="product-item">
-              <div class="product-wrap">
-                <a href="#" class="product-img"><img src="assets/men/8.jpg" alt=""></a>
-                <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
-                <div class="product-price">540.000 <sup>VNĐ</sup></div>
-                <div class="product-sub-price"><del>600.000 VNĐ</del></div>
-              </div>
-          </div>
+      <div class="product-list row">
+        <div class="product-item">
+            <div class="product-wrap hoverable">
+              <span class="sale-badge">-10%</span>
+              <a href="#" class="product-img"><img src="assets/men/6.jpg" alt=""></a>
+              <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
+              <div class="product-price">540.000 <sup>VNĐ</sup></div>
+              <div class="product-sub-price"><del>600.000 VNĐ</del></div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="product-wrap hoverable">
+              <span class="sale-badge">-10%</span>
+              <a href="#" class="product-img"><img src="assets/women/6.jpg" alt=""></a>
+              <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
+              <div class="product-price">540.000 <sup>VNĐ</sup></div>
+              <div class="product-sub-price"><del>600.000 VNĐ</del></div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="product-wrap hoverable">
+              <a href="#" class="product-img"><img src="assets/men/7.jpg" alt=""></a>
+              <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
+              <div class="product-price">540.000 <sup>VNĐ</sup></div>
+              <div class="product-sub-price"><del>600.000 VNĐ</del></div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="product-wrap hoverable">
+              <a href="#" class="product-img"><img src="assets/women/7.jpg" alt=""></a>
+              <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
+              <div class="product-price">540.000 <sup>VNĐ</sup></div>
+              <div class="product-sub-price"><del>600.000 VNĐ</del></div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="product-wrap hoverable">
+              <a href="#" class="product-img"><img src="assets/men/8.jpg" alt=""></a>
+              <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
+              <div class="product-price">540.000 <sup>VNĐ</sup></div>
+              <div class="product-sub-price"><del>600.000 VNĐ</del></div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="product-wrap hoverable">
+              <a href="#" class="product-img"><img src="assets/men/10.jpg" alt=""></a>
+              <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
+              <div class="product-price">540.000 <sup>VNĐ</sup></div>
+              <div class="product-sub-price"><del>600.000 VNĐ</del></div>
+            </div>
         </div>
       </div>
     </div>
   </section>
   <section class="section-wrap hot-deal">
     <div class="container-fluid">
-      <div class="section-title text-center">
+      <div class="section-title center-align">
         <h3>Hot Deal - Mega Sale</h3>
       </div>
-      <div class="section-list">
-        <div class="product-list">
-          <div class="product-item">
-              <div class="product-wrap">
-                <span class="sale-badge">-10%</span>
-                <a href="#" class="product-img"><img src="assets/men/9.jpg" alt=""></a>
-                <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
-                <div class="product-price">540.000 <sup>VNĐ</sup></div>
-                <div class="product-sub-price"><del>600.000 VNĐ</del></div>
-              </div>
-          </div>
-          <div class="product-item">
-              <div class="product-wrap">
-                <span class="sale-badge">-10%</span>
-                <a href="#" class="product-img"><img src="assets/women/9.jpg" alt=""></a>
-                <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
-                <div class="product-price">540.000 <sup>VNĐ</sup></div>
-                <div class="product-sub-price"><del>600.000 VNĐ</del></div>
-              </div>
-          </div>
-          <div class="product-item">
-              <div class="product-wrap">
-                <span class="sale-badge">-5%</span>
-                <a href="#" class="product-img"><img src="assets/men/10.jpg" alt=""></a>
-                <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
-                <div class="product-price">540.000 <sup>VNĐ</sup></div>
-                <div class="product-sub-price"><del>600.000 VNĐ</del></div>
-              </div>
-          </div>
-          <div class="product-item">
-              <div class="product-wrap">
-                <span class="sale-badge">-15%</span>
-                <a href="#" class="product-img"><img src="assets/women/10.jpg" alt=""></a>
-                <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
-                <div class="product-price">540.000 <sup>VNĐ</sup></div>
-                <div class="product-sub-price"><del>600.000 VNĐ</del></div>
-              </div>
-          </div>
-          <div class="product-item">
-              <div class="product-wrap">
-                <span class="sale-badge">-20%</span>
-                <a href="#" class="product-img"><img src="assets/men/11.jpg" alt=""></a>
-                <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
-                <div class="product-price">540.000 <sup>VNĐ</sup></div>
-                <div class="product-sub-price"><del>600.000 VNĐ</del></div>
-              </div>
-          </div>
+      <div class="product-list row">
+        <div class="product-item">
+            <div class="product-wrap hoverable">
+              <span class="sale-badge">-10%</span>
+              <a href="#" class="product-img"><img src="assets/men/9.jpg" alt=""></a>
+              <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
+              <div class="product-price">540.000 <sup>VNĐ</sup></div>
+              <div class="product-sub-price"><del>600.000 VNĐ</del></div>
+            </div>
         </div>
-        <div class="text-center">
-          <a href="#" class="btn load-more">Load more</a>
+        <div class="product-item">
+            <div class="product-wrap hoverable">
+              <span class="sale-badge">-10%</span>
+              <a href="#" class="product-img"><img src="assets/women/9.jpg" alt=""></a>
+              <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
+              <div class="product-price">540.000 <sup>VNĐ</sup></div>
+              <div class="product-sub-price"><del>600.000 VNĐ</del></div>
+            </div>
         </div>
+        <div class="product-item">
+            <div class="product-wrap hoverable">
+              <span class="sale-badge">-5%</span>
+              <a href="#" class="product-img"><img src="assets/men/10.jpg" alt=""></a>
+              <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
+              <div class="product-price">540.000 <sup>VNĐ</sup></div>
+              <div class="product-sub-price"><del>600.000 VNĐ</del></div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="product-wrap hoverable">
+              <span class="sale-badge">-15%</span>
+              <a href="#" class="product-img"><img src="assets/women/10.jpg" alt=""></a>
+              <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
+              <div class="product-price">540.000 <sup>VNĐ</sup></div>
+              <div class="product-sub-price"><del>600.000 VNĐ</del></div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="product-wrap hoverable">
+              <span class="sale-badge">-20%</span>
+              <a href="#" class="product-img"><img src="assets/men/11.jpg" alt=""></a>
+              <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
+              <div class="product-price">540.000 <sup>VNĐ</sup></div>
+              <div class="product-sub-price"><del>600.000 VNĐ</del></div>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="product-wrap hoverable">
+              <span class="sale-badge">-20%</span>
+              <a href="#" class="product-img"><img src="assets/men/19.jpg" alt=""></a>
+              <a href="#"><h4 class="product-name">GAUDI A/W 2017Texture and Pattern</h4></a>
+              <div class="product-price">540.000 <sup>VNĐ</sup></div>
+              <div class="product-sub-price"><del>600.000 VNĐ</del></div>
+            </div>
+        </div>
+      </div>
+      <div class="center-align">
+        <a href="#" class="btn load-more">Load more</a>
       </div>
     </div>
   </section>
   <section class="section-wrap brand-logo">
-    <div class="container-fluid">
+    <div class="">
         <div class="brand-item">
           <a href="#"><img src="img/cucinelli.svg" alt=""></a>
         </div>
@@ -337,80 +402,94 @@
     </div>
   </section>
   <footer>
-    <div class="container-fluid">
-      <div class="footer-item showroom">
-        <div class="footer-item-wrap">
-          <h3 class="footer-item-title">
-            Showroom
-          </h3>
-        </div>
-        <div class="footer-item-content">
-          <ul>
-            <li>Tầng 1&amp;2: Cafe Rita Võ - 211 Nguyễn Văn Cừ, P3, Q.5, Tp.HCM</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-item support">
-        <div class="footer-item-wrap">
-          <h3 class="footer-item-title">
-            Hỗ trợ khách hàng
-          </h3>
-        </div>
-        <div class="footer-item-content">
-          <ul>
-            <li><a href="#">Hướng dẫn mua hàng</a></li>
-            <li><a href="#">Chính sách giao hàng</a></li>
-            <li><a href="#">Quy định đổi trả</a></li>
-            <li><a href="#">Hướng dẫn bảo quản</a></li>
-          </ul>
+    <div class="row">
+      <div class="col s12 m6 l2 xl2">
+        <div class="footer-item showroom">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              Showroom
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <ul>
+              <li>Tầng 1&amp;2: Cafe Rita Võ - 211 Nguyễn Văn Cừ, P3, Q.5, Tp.HCM</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="footer-item subscribe">
-        <div class="footer-item-wrap">
-          <h3 class="footer-item-title">
-            Nhận thông tin khuyến mãi
-          </h3>
-        </div>
-        <div class="footer-item-content">
-          <p>Đăng ký để nhận thông tin khuyến mãi</p>
-          <form action="">
-            <input type="email" name="your-mail">
-            <input type="submit" value="Đăng ký">
-          </form>
-        </div>
-      </div>
-      <div class="footer-item info">
-        <div class="footer-item-wrap">
-          <h3 class="footer-item-title">
-            CÔNG TY TNHH RITAVÕ (RITAVO CO., LTD)
-          </h3>
-        </div>
-        <div class="footer-item-content">
-          <p>
-            5A Đường Số 3 Phường An Phú, Quận 2 TPHCM <br>
-            Số giấy chứng nhận đăng ký kinh doanh: 0302802627 do Sở kế hoạch và đầu tư TP. Hồ Chí Minh cấp lần đầu ngày 05/12/2002, thay đổi lần thứ 23 ngày 14/12/2015
-          </p>
-          <p>Người đại diện: Ông Võ Mậu Quốc Duy</p>
+      <div class="col s12 m6 l2 xl2">
+        <div class="footer-item support">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              Hỗ trợ khách hàng
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <ul>
+              <li><a href="#">Hướng dẫn mua hàng</a></li>
+              <li><a href="#">Chính sách giao hàng</a></li>
+              <li><a href="#">Quy định đổi trả</a></li>
+              <li><a href="#">Hướng dẫn bảo quản</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="footer-item connect">
-        <div class="footer-item-wrap">
-          <h3 class="footer-item-title">
-            CONNECT WITH US
-          </h3>
+      <div class="col s12 m6 l3 xl3">
+        <div class="footer-item subscribe">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              Nhận thông tin khuyến mãi
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <p>Đăng ký để nhận thông tin khuyến mãi</p>
+            <form action="">
+              <input type="email" name="your-mail">
+              <input type="submit" value="Đăng ký">
+            </form>
+          </div>
         </div>
-        <div class="footer-item-content">
-          <ul class="social">
-            <li><a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-            <li><a href="#" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-            <li><a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-          </ul>
+      </div>
+      <div class="col s12 m6 l3 xl3">
+        <div class="footer-item info">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              CÔNG TY TNHH RITAVÕ (RITAVO CO., LTD)
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <p>
+              5A Đường Số 3 Phường An Phú, Quận 2 TPHCM <br>
+              Số giấy chứng nhận đăng ký kinh doanh: 0302802627 do Sở kế hoạch và đầu tư TP. Hồ Chí Minh cấp lần đầu ngày 05/12/2002, thay đổi lần thứ 23 ngày 14/12/2015
+            </p>
+            <p>Người đại diện: Ông Võ Mậu Quốc Duy</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m12 l2 xl2">
+        <div class="footer-item connect">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              CONNECT WITH US
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <ul class="social">
+              <li><a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+              <li><a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid copyright">
-      <p class="text-center">&copy;2017 RITAVO.OUTLET.COM All Rights Reserved</p>
+    <div class="copyright">
+      <div class="col s12">
+        <p class="center-align">&copy;2017 RITAVO.OUTLET.COM All Rights Reserved</p>
+      </div>
     </div>
   </footer>
 </body>
+<script src="js/jquery.flexslider-min.js" charset="utf-8"></script>
+<script src="js/lightbox.min.js" charset="utf-8"></script>
 </html>

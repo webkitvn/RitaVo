@@ -6,30 +6,94 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Product Category</title>
   <!-- Latest compiled and minified CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="css/flexslider.css">
+  <link rel="stylesheet" href="css/lightbox.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
   <script src="js/main.js"></script>
 </head>
-<body class="product-category">
+<body class="product-category browser-default">
   <header>
       <div class="top-header">
+        <a href="#" data-activates="slide-main-menu" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
         <a class="logo" href="index.html">
           <img src="img/ritavologo.svg" alt="Trang chủ">
         </a>
         <div class="sub-menu">
           <ul>
-            <li class="search"><a href="#" title="Tìm kiếm">Search</a></li>
+            <li class="search"><a id="search-btn" href="#search-modal" title="Tìm kiếm"><i class="material-icons">search</i></a></li>
             <li class="lang"><a href="#" title="English">EN</a>/<a href="#" title="Tiếng Việt">VN</a></li>
             <li class="user"><a href="#" title="Đăng nhập">Login</a></li>
-            <li class="cart"><a href="#" title="Giỏ hàng"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="text">Giỏ hàng</span> <span class="qty">3</span></a></li>
+            <li class="cart"><a href="#" title="Giỏ hàng"><i class="material-icons">shopping_basket</i> <span class="text">Giỏ hàng</span> <span class="qty">3</span></a></li>
           </ul>
         </div>
       </div>
-      <div class="navigation hidden-xs hidden-sm">
+      <div id="search-modal" class="modal">
+        <div class="modal-content">
+          <nav>
+            <div class="nav-wrapper">
+              <form>
+                <div class="input-field">
+                  <input id="search" type="search" placeholder="Nhập từ khóa cần tìm" required>
+                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                  <i class="material-icons modal-action modal-close">close</i>
+                </div>
+              </form>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- Begin Side-nav -->
+      <ul id="slide-main-menu" class="side-nav">
+        <li>
+          <a class="logo" href="index.html">
+            <img src="img/ritavologo-white.png" alt="Trang chủ">
+          </a>
+        </li>
+        <li>
+          <a href="#" class="waves-effect">Thương hiệu</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Gaudi</a></li>
+            <li><a href="#" class="waves-effect">Tombolini</a></li>
+            <li><a href="#" class="waves-effect">La perla</a></li>
+            <li><a href="#" class="waves-effect">Brunello Cucinelli</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="waves-effect">Thời trang nam</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Áo</a></li>
+            <li><a href="#" class="waves-effect">Quần</a></li>
+            <li><a href="#" class="waves-effect">Phụ kiện</a></li>
+            <li><a href="#" class="waves-effect">Giày</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="waves-effect">Thời trang nữ</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Áo</a></li>
+            <li><a href="#" class="waves-effect">Quần</a></li>
+            <li><a href="#" class="waves-effect">Phụ kiện</a></li>
+            <li><a href="#" class="waves-effect">Giày</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="waves-effect">Sản phẩm bán chạy</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Áo</a></li>
+            <li><a href="#" class="waves-effect">Quần</a></li>
+            <li><a href="#" class="waves-effect">Phụ kiện</a></li>
+            <li><a href="#" class="waves-effect">Giày</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- End Side-nav -->
+      <div class="navigation hide-on-med-and-down">
         <ul class="main-menu">
           <li class="active">
             <a href="#">Thương hiệu</a>
@@ -73,7 +137,7 @@
   <section class="section-wrap">
     <div class="container-fluid">
       <div class="row">
-        <div class="col s12 m4 l2 xl2 hidden-xs sidebar">
+        <div class="col s12 m12 l2 xl2 hide-on-med-and-down sidebar">
           <h2>Thời trang nam</h2>
           <div class="product-nav category-nav">
             <div class="product-nav-item">
@@ -150,7 +214,7 @@
           <div class="product-nav attribute-nav">
             <div class="product-nav-item">
               <div class="product-nav-item-head">
-                <a class="" role="button" data-toggle="collapse" href="#item-5" aria-expanded="false" data-target="item-5">
+                <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-5" aria-expanded="false" data-target="item-5">
                   Thương hiệu <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                 </a>
               </div>
@@ -167,7 +231,7 @@
           <div class="product-nav attribute-nav">
             <div class="product-nav-item">
               <div class="product-nav-item-head">
-                <a class="" role="button" data-toggle="collapse" href="#item-6" aria-expanded="false" data-target="item-6">
+                <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-6" aria-expanded="false" data-target="item-6">
                   Kích cỡ <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                 </a>
               </div>
@@ -185,7 +249,7 @@
           <div class="product-nav attribute-nav">
             <div class="product-nav-item">
               <div class="product-nav-item-head">
-                <a class="" role="button" data-toggle="collapse" href="#item-7" aria-expanded="false" data-target="item-7">
+                <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-7" aria-expanded="false" data-target="item-7">
                   Màu sắc <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                 </a>
               </div>
@@ -203,7 +267,7 @@
           <div class="product-nav attribute-nav">
             <div class="product-nav-item">
               <div class="product-nav-item-head">
-                <a class="" role="button" data-toggle="collapse" href="#item-8" aria-expanded="false" data-target="item-8">
+                <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-8" aria-expanded="false" data-target="item-8">
                   Giá <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                 </a>
               </div>
@@ -219,41 +283,46 @@
             </div>
           </div>
         </div>
-        <div class="col s12 m8 l10 xl10">
-          <div class="category-product-title">
-            <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
-              <li itemprop="itemListElement" itemscope
-                  itemtype="http://schema.org/ListItem">
-                <a itemprop="item" href="#">
-                <span itemprop="name">Thời trang nam</span></a>
-                <meta itemprop="position" content="1" />
-              </li>
-              <li itemprop="itemListElement" itemscope
-                  itemtype="http://schema.org/ListItem">
-                <a itemprop="item" href="#">
-                <span itemprop="name">Áo khoác / Vest</span></a>
-                <meta itemprop="position" content="2" />
-              </li>
-            </ol>
-            <h1 class="category-title">Áo khoác / Vest</h1>
-            <div class="input-field">
-              <form action="" class="category-product-sort">
-                <select name="order" id="">
-                  <option value="0" disabled selected>Mới nhất</option>
-                  <option value="1">Xem nhiều nhất</option>
-                  <option value="2">Mua nhiều nhất</option>
-                  <option value="3">Giá thấp nhất</option>
-                  <option value="4">Giá cao nhất</option>
-                </select>
-                <input type="submit">
-              </form>
+        <div class="col s12 m12 l10 xl10">
+          <div class="category-product-title page-top">
+            <div class="row">
+              <div class="col s12 m8 l10 xl10">
+                <nav itemscope itemtype="http://schema.org/BreadcrumbList">
+                  <div class="nav-wrapper">
+                    <a href="#" class="breadcrumb" itemprop="itemListElement" itemscope
+                        itemtype="http://schema.org/ListItem">
+                      <span itemprop="name">Thời trang nam</span></a>
+                      <meta itemprop="position" content="1" />
+                    </a>
+                    <a href="#" class="breadcrumb" itemprop="itemListElement" itemscope
+                        itemtype="http://schema.org/ListItem">
+                      <span itemprop="name">Áo khoác / Vest</span></a>
+                      <meta itemprop="position" content="2" />
+                    </a>
+                  </div>
+                </nav>
+                <h1 class="category-title">Áo khoác / Vest</h1>
+              </div>
+              <div class="col s12 m4 l2 xl2">
+                <div class="input-field">
+                  <form action="" class="category-product-sort">
+                    <select name="order" id="">
+                      <option value="0" disabled selected>Mới nhất</option>
+                      <option value="1">Xem nhiều nhất</option>
+                      <option value="2">Mua nhiều nhất</option>
+                      <option value="3">Giá thấp nhất</option>
+                      <option value="4">Giá cao nhất</option>
+                    </select>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
           <div class="product-list category-product-list">
             <div class="row">
               <div class="col s6 m4 l3 xl3">
                 <div class="product-item">
-                  <div class="product-wrap">
+                  <div class="product-wrap hoverable">
                     <a href="#"><img src="assets/men/1.jpg" alt=""></a>
                     <div class="product-item-name">
                       <a href="#"><h4>GAUDI A/W 2017Texture and Pattern</h4></a>
@@ -267,17 +336,17 @@
                     </div>
                     <div class="product-item-bottom">
                       <div class="product-item-bottom-left pull-left">
-                        <div class="view-count"><i class="fa fa-eye" aria-hidden="true"></i> 236</div>
-                        <a href="#" class="permalink"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        <div class="view-count"><i class="tiny material-icons">visibility</i> <span>236</span></div>
+                        <a href="#quickview-modal" class="quickview-btn"><i class="material-icons">search</i></a>
                       </div>
-                      <a href="#" class="cart-btn product-item-bottom-right pull-right"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                      <a href="#" class="cart-btn product-item-bottom-right pull-right"><i class="material-icons">shopping_cart</i></a>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col s6 m4 l3 xl3">
                 <div class="product-item">
-                  <div class="product-wrap">
+                  <div class="product-wrap hoverable">
                     <a href="#"><img src="assets/men/2.jpg" alt=""></a>
                     <div class="product-item-name">
                       <a href="#"><h4>GAUDI A/W 2017Texture and Pattern</h4></a>
@@ -291,17 +360,17 @@
                     </div>
                     <div class="product-item-bottom">
                       <div class="product-item-bottom-left pull-left">
-                        <div class="view-count"><i class="fa fa-eye" aria-hidden="true"></i> 236</div>
-                        <a href="#" class="permalink"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        <div class="view-count"><i class="tiny material-icons">visibility</i> <span>236</span></div>
+                        <a href="#quickview-modal" class="quickview-btn"><i class="material-icons">search</i></a>
                       </div>
-                      <a href="#" class="cart-btn product-item-bottom-right pull-right"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                      <a href="#" class="cart-btn product-item-bottom-right pull-right"><i class="material-icons">shopping_cart</i></a>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col s6 m4 l3 xl3">
                 <div class="product-item">
-                  <div class="product-wrap">
+                  <div class="product-wrap hoverable">
                     <a href="#"><img src="assets/men/3.jpg" alt=""></a>
                     <div class="product-item-name">
                       <a href="#"><h4>GAUDI A/W 2017Texture and Pattern</h4></a>
@@ -315,17 +384,17 @@
                     </div>
                     <div class="product-item-bottom">
                       <div class="product-item-bottom-left pull-left">
-                        <div class="view-count"><i class="fa fa-eye" aria-hidden="true"></i> 236</div>
-                        <a href="#" class="permalink"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        <div class="view-count"><i class="tiny material-icons">visibility</i> <span>236</span></div>
+                        <a href="#quickview-modal" class="quickview-btn"><i class="material-icons">search</i></a>
                       </div>
-                      <a href="#" class="cart-btn product-item-bottom-right pull-right"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                      <a href="#" class="cart-btn product-item-bottom-right pull-right"><i class="material-icons">shopping_cart</i></a>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col s6 m4 l3 xl3">
                 <div class="product-item">
-                  <div class="product-wrap">
+                  <div class="product-wrap hoverable">
                     <a href="#"><img src="assets/men/4.jpg" alt=""></a>
                     <div class="product-item-name">
                       <a href="#"><h4>GAUDI A/W 2017Texture and Pattern</h4></a>
@@ -339,17 +408,17 @@
                     </div>
                     <div class="product-item-bottom">
                       <div class="product-item-bottom-left pull-left">
-                        <div class="view-count"><i class="fa fa-eye" aria-hidden="true"></i> 236</div>
-                        <a href="#" class="permalink"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        <div class="view-count"><i class="tiny material-icons">visibility</i> <span>236</span></div>
+                        <a href="#quickview-modal" class="quickview-btn"><i class="material-icons">search</i></a>
                       </div>
-                      <a href="#" class="cart-btn product-item-bottom-right pull-right"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                      <a href="#" class="cart-btn product-item-bottom-right pull-right"><i class="material-icons">shopping_cart</i></a>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col s6 m4 l3 xl3">
                 <div class="product-item">
-                  <div class="product-wrap">
+                  <div class="product-wrap hoverable">
                     <a href="#"><img src="assets/men/5.jpg" alt=""></a>
                     <div class="product-item-name">
                       <a href="#"><h4>GAUDI A/W 2017Texture and Pattern</h4></a>
@@ -363,17 +432,17 @@
                     </div>
                     <div class="product-item-bottom">
                       <div class="product-item-bottom-left pull-left">
-                        <div class="view-count"><i class="fa fa-eye" aria-hidden="true"></i> 236</div>
-                        <a href="#" class="permalink"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        <div class="view-count"><i class="tiny material-icons">visibility</i> <span>236</span></div>
+                        <a href="#quickview-modal" class="quickview-btn"><i class="material-icons">search</i></a>
                       </div>
-                      <a href="#" class="cart-btn product-item-bottom-right pull-right"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                      <a href="#" class="cart-btn product-item-bottom-right pull-right"><i class="material-icons">shopping_cart</i></a>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col s6 m4 l3 xl3">
                 <div class="product-item">
-                  <div class="product-wrap">
+                  <div class="product-wrap hoverable">
                     <a href="#"><img src="assets/men/6.jpg" alt=""></a>
                     <div class="product-item-name">
                       <a href="#"><h4>GAUDI A/W 2017Texture and Pattern</h4></a>
@@ -387,10 +456,10 @@
                     </div>
                     <div class="product-item-bottom">
                       <div class="product-item-bottom-left pull-left">
-                        <div class="view-count"><i class="fa fa-eye" aria-hidden="true"></i> 236</div>
-                        <a href="#" class="permalink"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        <div class="view-count"><i class="tiny material-icons">visibility</i> <span>236</span></div>
+                        <a href="#quickview-modal" class="quickview-btn"><i class="material-icons">search</i></a>
                       </div>
-                      <a href="#" class="cart-btn product-item-bottom-right pull-right"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                      <a href="#" class="cart-btn product-item-bottom-right pull-right"><i class="material-icons">shopping_cart</i></a>
                     </div>
                   </div>
                 </div>
@@ -402,7 +471,7 @@
     </div>
   </section>
   <section class="section-wrap brand-logo">
-    <div class="container-fluid">
+    <div class="">
         <div class="brand-item">
           <a href="#"><img src="img/cucinelli.svg" alt=""></a>
         </div>
@@ -418,80 +487,372 @@
     </div>
   </section>
   <footer>
-    <div class="container-fluid">
-      <div class="footer-item showroom">
-        <div class="footer-item-wrap">
-          <h3 class="footer-item-title">
-            Showroom
-          </h3>
+    <div class="row">
+      <div class="col s12 m6 l2 xl2">
+        <div class="footer-item showroom">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              Showroom
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <ul>
+              <li>Tầng 1&amp;2: Cafe Rita Võ - 211 Nguyễn Văn Cừ, P3, Q.5, Tp.HCM</li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-item-content">
+      </div>
+      <div class="col s12 m6 l2 xl2">
+        <div class="footer-item support">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              Hỗ trợ khách hàng
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <ul>
+              <li><a href="#">Hướng dẫn mua hàng</a></li>
+              <li><a href="#">Chính sách giao hàng</a></li>
+              <li><a href="#">Quy định đổi trả</a></li>
+              <li><a href="#">Hướng dẫn bảo quản</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3 xl3">
+        <div class="footer-item subscribe">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              Nhận thông tin khuyến mãi
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <p>Đăng ký để nhận thông tin khuyến mãi</p>
+            <form action="">
+              <input type="email" name="your-mail">
+              <input type="submit" value="Đăng ký">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3 xl3">
+        <div class="footer-item info">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              CÔNG TY TNHH RITAVÕ (RITAVO CO., LTD)
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <p>
+              5A Đường Số 3 Phường An Phú, Quận 2 TPHCM <br>
+              Số giấy chứng nhận đăng ký kinh doanh: 0302802627 do Sở kế hoạch và đầu tư TP. Hồ Chí Minh cấp lần đầu ngày 05/12/2002, thay đổi lần thứ 23 ngày 14/12/2015
+            </p>
+            <p>Người đại diện: Ông Võ Mậu Quốc Duy</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m12 l2 xl2">
+        <div class="footer-item connect">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              CONNECT WITH US
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <ul class="social">
+              <li><a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+              <li><a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="col s12">
+        <p class="center-align">&copy;2017 RITAVO.OUTLET.COM All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <div class="fixed-action-btn click-to-toggle hide-on-large-only">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">settings</i>
+    </a>
+    <ul>
+      <li><a data-activates="slide-filter-nav" class="button-collapse btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">shopping_basket</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+    </ul>
+  </div>
+  <!-- Begin Sidenav Filter -->
+  <div id="slide-filter-nav" class="side-nav sidebar">
+    <h2><small>Lọc sản phẩm</small>Thời trang nam</h2>
+    <div class="product-nav category-nav">
+      <div class="product-nav-item">
+        <div class="product-nav-item-head">
+          <a  href="#" class="product-nav-item-title">Áo</a>
+          <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-1" aria-expanded="false" data-target="sideNav-item-1">
+            <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+          </a>
+        </div>
+        <div class="product-nav-content collapse in" id="sideNav-item-1">
           <ul>
-            <li>Tầng 1&amp;2: Cafe Rita Võ - 211 Nguyễn Văn Cừ, P3, Q.5, Tp.HCM</li>
+            <li><a href="#">Áo khoác/ vest</a></li>
+            <li><a href="#">Áo ấm</a></li>
+            <li><a href="#">Áo da</a></li>
+            <li><a href="#">Áo khoác mỏng</a></li>
+            <li><a href="#">Áo len</a></li>
+            <li><a href="#">Áo thun</a></li>
+            <li><a href="#">Áo sơ mi</a></li>
+            <li><a href="#">Áo ghi – lê</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-item support">
-        <div class="footer-item-wrap">
-          <h3 class="footer-item-title">
-            Hỗ trợ khách hàng
-          </h3>
+      <div class="product-nav-item">
+        <div class="product-nav-item-head">
+          <a  href="#" class="product-nav-item-title">Quần</a>
+          <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-2" aria-expanded="false" data-target="sideNav-item-2">
+            <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+          </a>
         </div>
-        <div class="footer-item-content">
+        <div class="product-nav-content collapse in" id="sideNav-item-2">
           <ul>
-            <li><a href="#">Hướng dẫn mua hàng</a></li>
-            <li><a href="#">Chính sách giao hàng</a></li>
-            <li><a href="#">Quy định đổi trả</a></li>
-            <li><a href="#">Hướng dẫn bảo quản</a></li>
+            <li><a href="#">Quần jeans</a></li>
+            <li><a href="#">Quần khaki</a></li>
+            <li><a href="#">Quần vải</a></li>
+            <li><a href="#">Quần short</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-item subscribe">
-        <div class="footer-item-wrap">
-          <h3 class="footer-item-title">
-            Nhận thông tin khuyến mãi
-          </h3>
+      <div class="product-nav-item">
+        <div class="product-nav-item-head">
+          <a  href="#" class="product-nav-item-title">Phụ kiện</a>
+          <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-3" aria-expanded="false" data-target="sideNav-item-3">
+            <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+          </a>
         </div>
-        <div class="footer-item-content">
-          <p>Đăng ký để nhận thông tin khuyến mãi</p>
+        <div class="product-nav-content collapse in" id="sideNav-item-3">
+          <ul>
+            <li><a href="#">Ba lo</a></li>
+            <li><a href="#">Túi xách</a></li>
+            <li><a href="#">Ví</a></li>
+            <li><a href="#">Ví ngắn</a></li>
+            <li><a href="#">Ví dài</a></li>
+            <li><a href="#">Khăn choàng cổ</a></li>
+            <li><a href="#">Thắt lưng</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="product-nav-item">
+        <div class="product-nav-item-head">
+          <a  href="#" class="product-nav-item-title">Giày</a>
+          <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-4" aria-expanded="false" data-target="sideNav-item-4">
+            <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+          </a>
+        </div>
+        <div class="product-nav-content collapse in" id="sideNav-item-4">
+          <ul>
+            <li><a href="#">Giày thể thao/ sneaker</a></li>
+            <li><a href="#">Giày mọi</a></li>
+            <li><a href="#">Dép</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="product-nav attribute-nav">
+      <div class="product-nav-item">
+        <div class="product-nav-item-head">
+          <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-5" aria-expanded="false" data-target="sideNav-item-5">
+            Thương hiệu <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+          </a>
+        </div>
+        <div class="product-nav-content collapse in" id="sideNav-item-5">
+          <ul>
+            <li><a href="#">GAUDI</a></li>
+            <li><a href="#">TOMBOLINI</a></li>
+            <li><a href="#">LA PERLA</a></li>
+            <li><a href="#">BRUNELLO CUCINELLI</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="product-nav attribute-nav">
+      <div class="product-nav-item">
+        <div class="product-nav-item-head">
+          <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-6" aria-expanded="false" data-target="sideNav-item-6">
+            Kích cỡ <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+          </a>
+        </div>
+        <div class="product-nav-content collapse in" id="sideNav-item-6">
+          <ul class="product-size">
+            <li class="active"><a href="#">S</a></li>
+            <li><a href="#">M</a></li>
+            <li><a href="#">L</a></li>
+            <li><a href="#">XL</a></li>
+            <li><a href="#">XXL</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="product-nav attribute-nav">
+      <div class="product-nav-item">
+        <div class="product-nav-item-head">
+          <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-7" aria-expanded="false" data-target="sideNav-item-7">
+            Màu sắc <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+          </a>
+        </div>
+        <div class="product-nav-content collapse in" id="sideNav-item-7">
+          <ul class="product-color">
+            <li><a href="#" style="background:red">Red</a></li>
+            <li><a href="#" style="background:green">green</a></li>
+            <li><a href="#" style="background:blue">blue</a></li>
+            <li><a href="#" style="background:yellow">yellow</a></li>
+            <li><a href="#" style="background:black">black</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="product-nav attribute-nav">
+      <div class="product-nav-item">
+        <div class="product-nav-item-head">
+          <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-8" aria-expanded="false" data-target="sideNav-item-8">
+            Giá <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+          </a>
+        </div>
+        <div class="product-nav-content collapse in" id="sideNav-item-8">
+          <ul class="product-price-range">
+            <li class="active"><a href="#">Từ 1 - 3 triệu</a></li>
+            <li><a href="#">Từ 3 - 7 triệu</a></li>
+            <li><a href="#">Từ 7 - 10 triệu</a></li>
+            <li><a href="#">Từ 10 - 15 triệu</a></li>
+            <li><a href="#">Trên 15 triệu</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Sidenav Filter -->
+  <!-- Begin Product Quickview Modal-->
+  <div id="quickview-modal" class="modal">
+    <div class="product-quickview">
+      <div class="row">
+        <div class="col s12 m5 l7 xl7">
+          <div class="images">
+            <div id="slider" class="flexslider">
+              <ul class="slides">
+                <li>
+                  <img src="assets/men/1.jpg" />
+                </li>
+                <li>
+                  <img src="assets/men/2.jpg" />
+                </li>
+                <li>
+                  <img src="assets/men/3.jpg" />
+                </li>
+                <li>
+                  <img src="assets/men/4.jpg" />
+                </li>
+                <!-- items mirrored twice, total of 12 -->
+              </ul>
+              <div class="slider-custom-navigation custom-navigation">
+                <a href="#" class="flex-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                <a href="#" class="flex-next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <div id="carousel" class="flexslider">
+              <ul class="slides">
+                <li>
+                  <img src="assets/men/1.jpg" />
+                </li>
+                <li>
+                  <img src="assets/men/2.jpg" />
+                </li>
+                <li>
+                  <img src="assets/men/3.jpg" />
+                </li>
+                <li>
+                  <img src="assets/men/4.jpg" />
+                </li>
+                <!-- items mirrored twice, total of 12 -->
+              </ul>
+              <div class="carousel-custom-navigation custom-navigation">
+                <a href="#" class="flex-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                <a href="#" class="flex-next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m7 l5 lx5">
           <form action="">
-            <input type="email" name="your-mail">
-            <input type="submit" value="Đăng ký">
+            <div class="product-info">
+              <h2 class="product-title">GAUDI A/W 2017Texture and Patten</h2>
+              <div class="product-item-price">
+                <div class="product-item-price-wrap">
+                  <div class="product-price">540.000 <sup>VNĐ</sup></div>
+                  <div class="product-sub-price"><del>600.000 VNĐ</del></div>
+                </div>
+                <span class="sale-badge">-10%</span>
+              </div>
+              <div class="product-item-color">
+                <div class="product-item-color-wrap">
+                  <span>Color</span>
+                  <ul class="colors">
+                    <li class="selected"><a href="#" style="background:#13bd08">Xanh</a></li>
+                    <li><a href="#" style="background:#f10b0b;">Đỏ</a></li>
+                    <li><a href="#" style="background:#fdf500">Vàng</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product-item-size">
+                <div class="product-item-size-wrap">
+                  <span>Sizes</span>
+                  <ul class="sizes">
+                    <li><a href="#">S</a></li>
+                    <li><a href="#">M</a></li>
+                    <li><a href="#">L</a></li>
+                    <li><a href="#">XL</a></li>
+                    <li><a href="#">XXL</a></li>
+                  </ul>
+                </div>
+              </div>
+              <button class="btn waves-effect waves-light" type="submit" value=""><i class="material-icons left">shopping_cart</i>Thêm vào giỏ hàng</button>
+              <div class="size-guides">
+                  <span>Size guides</span>
+                  <table class="bordered striped responsive-table">
+                    <thead>
+                      <tr>
+                        <th colspan="7">BLAZER / SHIRTS / DRESSES / JACKETS / COATS</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Europe</td> <td>36/XS</td> <td>38/S</td> <td>40/M</td> <td>42/L</td> <td>44/XL</td> <td>46/XXL</td></tr>
+                      <tr><td>UK</td> <td>8</td> <td>10</td> <td>12</td> <td>14</td> <td>16</td> <td>18</td></tr>
+                      <tr><td>UK</td> <td>40</td> <td>42</td> <td>44</td> <td>46</td> <td>48</td> <td>50</td></tr>
+                      <tr><td>USA</td> <td>4</td> <td>6</td> <td>8</td> <td>10</td> <td>12</td> <td>14</td></tr>
+                    </tbody>
+                  </table>
+                  <table class="bordered striped responsive-table">
+                    <thead>
+                      <tr>
+                        <th colspan="7">Table of Equivalence</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Chest girth in cm</td> <td>84</td> <td>88</td> <td>92</td> <td>96</td> <td>100</td> <td>104</td></tr>
+                      <tr><td>Chest girth in inches</td> <td>33,1</td> <td>34,67</td> <td>36,25</td> <td>37,82</td> <td>39,04</td> <td>40,98</td></tr>
+                      <tr><td>Hip circumference in cm</td> <td>90</td> <td>94</td> <td>92</td> <td>96</td> <td>106</td> <td>110</td></tr>
+                      <tr><td>Hip circumference in inches</td> <td>33,1</td> <td>34,67</td> <td>36,25</td> <td>37,82</td> <td>39,04</td> <td>40,98</td></tr>
+                    </tbody>
+                  </table>
+              </div>
+            </div>
           </form>
         </div>
       </div>
-      <div class="footer-item info">
-        <div class="footer-item-wrap">
-          <h3 class="footer-item-title">
-            CÔNG TY TNHH RITAVÕ (RITAVO CO., LTD)
-          </h3>
-        </div>
-        <div class="footer-item-content">
-          <p>
-            5A Đường Số 3 Phường An Phú, Quận 2 TPHCM <br>
-            Số giấy chứng nhận đăng ký kinh doanh: 0302802627 do Sở kế hoạch và đầu tư TP. Hồ Chí Minh cấp lần đầu ngày 05/12/2002, thay đổi lần thứ 23 ngày 14/12/2015
-          </p>
-          <p>Người đại diện: Ông Võ Mậu Quốc Duy</p>
-        </div>
-      </div>
-      <div class="footer-item connect">
-        <div class="footer-item-wrap">
-          <h3 class="footer-item-title">
-            CONNECT WITH US
-          </h3>
-        </div>
-        <div class="footer-item-content">
-          <ul class="social">
-            <li><a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-            <li><a href="#" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-            <li><a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-          </ul>
-        </div>
-      </div>
     </div>
-    <div class="container-fluid copyright">
-      <p class="text-center">&copy;2017 RITAVO.OUTLET.COM All Rights Reserved</p>
-    </div>
-  </footer>
+  </div>
+  <!-- End Product Quickview Modal-->
 </body>
+<script src="js/jquery.flexslider-min.js" charset="utf-8"></script>
+<script src="js/lightbox.min.js" charset="utf-8"></script>
 </html>
