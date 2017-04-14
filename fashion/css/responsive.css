@@ -53,4 +53,11 @@
   .product-list .product-item .quickview-btn{
     display: none;
   }
+  .cart .cart-btn-group a{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .cart .cart-discount{
+    padding: 0;
+  }
 }

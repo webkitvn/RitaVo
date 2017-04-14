@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cart</title>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/flexslider.css">
+  <link rel="stylesheet" href="css/lightbox.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body class="cart browser-default">
+  <header>
+      <div class="top-header">
+        <a href="#" data-activates="slide-main-menu" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
+        <a class="logo" href="index.html">
+          <img src="img/ritavologo.svg" alt="Trang chủ">
+        </a>
+        <div class="sub-menu">
+          <ul>
+            <li class="search"><a id="search-btn" href="#search-modal" title="Tìm kiếm"><i class="material-icons">search</i></a></li>
+            <li class="lang"><a href="#" title="English">EN</a>/<a href="#" title="Tiếng Việt">VN</a></li>
+            <li class="user"><a href="#" title="Đăng nhập">Đăng nhập</a></li>
+            <li class="cart"><a href="#" title="Giỏ hàng"><i class="material-icons">shopping_basket</i> <span class="text">Giỏ hàng</span> <span class="qty">3</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="search-modal" class="modal">
+        <div class="modal-content">
+          <nav>
+            <div class="nav-wrapper">
+              <form>
+                <div class="input-field">
+                  <input id="search" type="search" placeholder="Nhập từ khóa cần tìm" required>
+                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                  <i class="material-icons modal-action modal-close">close</i>
+                </div>
+              </form>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- Begin Side-nav -->
+      <ul id="slide-main-menu" class="side-nav">
+        <li>
+          <a class="logo" href="index.html">
+            <img src="img/ritavologo-white.png" alt="Trang chủ">
+          </a>
+        </li>
+        <li>
+          <a href="#" class="waves-effect">Thương hiệu</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Gaudi</a></li>
+            <li><a href="#" class="waves-effect">Tombolini</a></li>
+            <li><a href="#" class="waves-effect">La perla</a></li>
+            <li><a href="#" class="waves-effect">Brunello Cucinelli</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="waves-effect">Thời trang nam</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Áo</a></li>
+            <li><a href="#" class="waves-effect">Quần</a></li>
+            <li><a href="#" class="waves-effect">Phụ kiện</a></li>
+            <li><a href="#" class="waves-effect">Giày</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="waves-effect">Thời trang nữ</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Áo</a></li>
+            <li><a href="#" class="waves-effect">Quần</a></li>
+            <li><a href="#" class="waves-effect">Phụ kiện</a></li>
+            <li><a href="#" class="waves-effect">Giày</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="waves-effect">Sản phẩm bán chạy</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Áo</a></li>
+            <li><a href="#" class="waves-effect">Quần</a></li>
+            <li><a href="#" class="waves-effect">Phụ kiện</a></li>
+            <li><a href="#" class="waves-effect">Giày</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="waves-effect">Tin thời trang</a></li>
+      </ul>
+      <!-- End Side-nav -->
+      <div class="navigation hide-on-med-and-down">
+        <ul class="main-menu">
+          <li class="active">
+            <a href="#">Thương hiệu</a>
+            <ul class="submenu">
+              <li><a href="#">Gaudi</a></li>
+              <li><a href="#">Tombolini</a></li>
+              <li><a href="#">La perla</a></li>
+              <li><a href="#">Brunello Cucinelli</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Thời trang nam</a>
+            <ul class="submenu">
+              <li><a href="#">Áo</a></li>
+              <li><a href="#">Quần</a></li>
+              <li><a href="#">Phụ kiện</a></li>
+              <li><a href="#">Giày</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Thời trang nữ</a>
+            <ul class="submenu">
+              <li><a href="#">Áo</a></li>
+              <li><a href="#">Quần</a></li>
+              <li><a href="#">Phụ kiện</a></li>
+              <li><a href="#">Giày</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Sản phẩm bán chạy</a>
+            <ul class="submenu">
+              <li><a href="#">Áo</a></li>
+              <li><a href="#">Quần</a></li>
+              <li><a href="#">Phụ kiện</a></li>
+              <li><a href="#">Giày</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Tin thời trang</a></li>
+        </ul>
+      </div>
+  </header>
+  <section class="section-wrap">
+    <div class="row">
+      <div class="col s12">
+        <div style="overflow-x: auto">
+          <table class="bordered centered">
+              <thead>
+                <tr>
+                  <th colspan="2">Sản phẩm</th>
+                  <th>Giá sản phẩm</th>
+                  <th>Số lượng</th>
+                  <th>Tổng đơn hàng</th>
+                  <th>Hủy sản phẩm</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="#"><img src="assets/women/17.jpg" alt=""></a>
+                  </td>
+                  <td>
+                    <a href="#"><h5>GAUDI A/W 2017 Texture and Pattern</h5></a>
+                  </td>
+                  <td>
+                    <div class="product-item-price">
+                      <div class="product-item-price-wrap">
+                        <div class="product-price">540.000 <sup>VNĐ</sup></div>
+                        <div class="product-sub-price"><del>600.000 VNĐ</del></div>
+                      </div>
+                      <span class="sale-badge">-10%</span>
+                    </div>
+                  </td>
+                  <td>
+                    <input class="qty" type="number" name="qty" value="1">
+                  </td>
+                  <td>
+                    <div class="product-item-price">
+                      <div class="product-item-price-wrap">
+                        <div class="product-price">540.000 <sup>VNĐ</sup></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#" class="delete"><i class="material-icons">delete</i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#"><img src="assets/women/13.jpg" alt=""></a>
+                  </td>
+                  <td>
+                    <a href="#"><h5>GAUDI A/W 2017 Texture and Pattern</h5></a>
+                  </td>
+                  <td>
+                    <div class="product-item-price">
+                      <div class="product-item-price-wrap">
+                        <div class="product-price">540.000 <sup>VNĐ</sup></div>
+                        <div class="product-sub-price"><del>600.000 VNĐ</del></div>
+                      </div>
+                      <span class="sale-badge">-10%</span>
+                    </div>
+                  </td>
+                  <td>
+                    <input class="qty" type="number" name="qty" value="1">
+                  </td>
+                  <td>
+                    <div class="product-item-price">
+                      <div class="product-item-price-wrap">
+                        <div class="product-price">540.000 <sup>VNĐ</sup></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#" class="delete"><i class="material-icons">delete</i></a>
+                  </td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 ">
+        <div class="cart-btn-group">
+          <a href="#" class="waves-effect waves-light btn continue-shopping-btn">Tiếp tục mua hàng <i class="material-icons right">shopping_cart</i></a>
+          <a href="#" class="waves-effect waves-light btn delete-cart-btn">Xóa giỏ hàng <i class="material-icons right">delete</i></a>
+          <a href="#" class="waves-effect waves-light btn update-cart-btn">Cập nhật giỏ hàng <i class="material-icons right">done</i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-wrap total">
+    <div class="row">
+      <div class="col s12 m6 l8 xl8">
+        <div class="cart-discount">
+          <label for="coupon-code">Mã giảm giá</label>
+          <input placeholder="Nhập mã giảm giá" id="coupon-code" type="text" class="validate">
+          <button class="btn coupon-btn">Đồng ý</button>
+        </div>
+      </div>
+      <div class="col s12 m6 l4 xl4">
+        <div class="cart-summary">
+          <h3 class="title">Tổng đơn hàng</h3>
+          <div class="cart-total">
+            <table>
+              <tbody>
+                <tr>
+                  <td>Tạm tính</td>
+                  <td>1.200.000 VNĐ</td>
+                </tr>
+                <tr>
+                  <td>Giảm giá</td>
+                  <td>180.000 VNĐ</td>
+                </tr>
+                <tr>
+                  <th>Thành tiền</th>
+                  <th>1.020.000 VNĐ</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="checkout methods items checkout-methods-items">
+            <li class="item">
+              <button type="button" data-role="proceed-to-checkout" title="Proceed to Checkout" class="btn checkout">
+                Tiến hành đặt hàng
+              </button>
+            </li>
+            <li class="item" style="display: none">
+              <a class="action multicheckout" href="#"><span>Check Out with Multiple Addresses</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-wrap brand-logo">
+    <div class="">
+        <div class="brand-item">
+          <a href="#"><img src="img/cucinelli.svg" alt=""></a>
+        </div>
+        <div class="brand-item">
+          <a href="#"><img src="img/gaudi.svg" alt=""></a>
+        </div>
+        <div class="brand-item">
+          <a href="#"><img src="img/laperla.svg" alt=""></a>
+        </div>
+        <div class="brand-item">
+          <a href="#"><img src="img/tombolini.svg" alt=""></a>
+        </div>
+    </div>
+  </section>
+  <footer>
+    <div class="row">
+      <div class="col s12 m6 l2 xl2">
+        <div class="footer-item showroom">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              Showroom
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <ul>
+              <li>Tầng 1&amp;2: Cafe Rita Võ - 211 Nguyễn Văn Cừ, P3, Q.5, Tp.HCM</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l2 xl2">
+        <div class="footer-item support">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              Hỗ trợ khách hàng
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <ul>
+              <li><a href="#">Hướng dẫn mua hàng</a></li>
+              <li><a href="#">Chính sách giao hàng</a></li>
+              <li><a href="#">Quy định đổi trả</a></li>
+              <li><a href="#">Hướng dẫn bảo quản</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3 xl3">
+        <div class="footer-item subscribe">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              Nhận thông tin khuyến mãi
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <p>Đăng ký để nhận thông tin khuyến mãi</p>
+            <form action="">
+              <input type="email" name="your-mail">
+              <input type="submit" value="Đăng ký">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3 xl3">
+        <div class="footer-item info">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              CÔNG TY TNHH RITAVÕ (RITAVO CO., LTD)
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <p>
+              5A Đường Số 3 Phường An Phú, Quận 2 TPHCM <br>
+              Số giấy chứng nhận đăng ký kinh doanh: 0302802627 do Sở kế hoạch và đầu tư TP. Hồ Chí Minh cấp lần đầu ngày 05/12/2002, thay đổi lần thứ 23 ngày 14/12/2015
+            </p>
+            <p>Người đại diện: Ông Võ Mậu Quốc Duy</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m12 l2 xl2">
+        <div class="footer-item connect">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              CONNECT WITH US
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <ul class="social">
+              <li><a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+              <li><a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="col s12">
+        <p class="center-align">&copy;2017 RITAVO.OUTLET.COM All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="js/jquery.flexslider-min.js" charset="utf-8"></script>
+<script src="js/lightbox.min.js" charset="utf-8"></script>
+</html>
