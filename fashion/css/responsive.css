@@ -17,13 +17,13 @@
       padding: 0;
   }
   header .top-header .logo{
-      width: 300px;
+      width: 250px;
   }
   header .top-header .button-collapse{
     color: #111;
     position: absolute;
     left: 10px;
-    top: 15px;
+    top: 12px;
   }
 }
 

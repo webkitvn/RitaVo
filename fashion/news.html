@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Product Brand</title>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/flexslider.css">
+  <link rel="stylesheet" href="css/lightbox.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body class="news browser-default">
+  <header>
+      <div class="top-header">
+        <a href="#" data-activates="slide-main-menu" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
+        <a class="logo" href="index.html">
+          <img src="img/ritavologo.svg" alt="Trang chủ">
+        </a>
+        <div class="sub-menu">
+          <ul>
+            <li class="search"><a id="search-btn" href="#search-modal" title="Tìm kiếm"><i class="material-icons">search</i></a></li>
+            <li class="lang"><a href="#" title="English">EN</a>/<a href="#" title="Tiếng Việt">VN</a></li>
+            <li class="user"><a href="#" title="Đăng nhập">Login</a></li>
+            <li class="cart"><a href="#" title="Giỏ hàng"><i class="material-icons">shopping_basket</i> <span class="text">Giỏ hàng</span> <span class="qty">3</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="search-modal" class="modal">
+        <div class="modal-content">
+          <nav>
+            <div class="nav-wrapper">
+              <form>
+                <div class="input-field">
+                  <input id="search" type="search" placeholder="Nhập từ khóa cần tìm" required>
+                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                  <i class="material-icons modal-action modal-close">close</i>
+                </div>
+              </form>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- Begin Side-nav -->
+      <ul id="slide-main-menu" class="side-nav">
+        <li>
+          <a class="logo" href="index.html">
+            <img src="img/ritavologo-white.png" alt="Trang chủ">
+          </a>
+        </li>
+        <li>
+          <a href="#" class="waves-effect">Thương hiệu</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Gaudi</a></li>
+            <li><a href="#" class="waves-effect">Tombolini</a></li>
+            <li><a href="#" class="waves-effect">La perla</a></li>
+            <li><a href="#" class="waves-effect">Brunello Cucinelli</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="waves-effect">Thời trang nam</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Áo</a></li>
+            <li><a href="#" class="waves-effect">Quần</a></li>
+            <li><a href="#" class="waves-effect">Phụ kiện</a></li>
+            <li><a href="#" class="waves-effect">Giày</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="waves-effect">Thời trang nữ</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Áo</a></li>
+            <li><a href="#" class="waves-effect">Quần</a></li>
+            <li><a href="#" class="waves-effect">Phụ kiện</a></li>
+            <li><a href="#" class="waves-effect">Giày</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="waves-effect">Sản phẩm bán chạy</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Áo</a></li>
+            <li><a href="#" class="waves-effect">Quần</a></li>
+            <li><a href="#" class="waves-effect">Phụ kiện</a></li>
+            <li><a href="#" class="waves-effect">Giày</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Tin thời trang</a>
+          <ul class="submenu">
+            <li><a href="#" class="waves-effect">Thương hiệu</a></li>
+            <li><a href="#" class="waves-effect">Làm đẹp</a></li>
+            <li><a href="#" class="waves-effect">Sức khỏe</a></li>
+            <li><a href="#" class="waves-effect">Xu hướng</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- End Side-nav -->
+      <div class="navigation hide-on-med-and-down">
+        <ul class="main-menu">
+          <li class="active">
+            <a href="#">Thương hiệu</a>
+            <ul class="submenu">
+              <li><a href="#">Gaudi</a></li>
+              <li><a href="#">Tombolini</a></li>
+              <li><a href="#">La perla</a></li>
+              <li><a href="#">Brunello Cucinelli</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Thời trang nam</a>
+            <ul class="submenu">
+              <li><a href="#">Áo</a></li>
+              <li><a href="#">Quần</a></li>
+              <li><a href="#">Phụ kiện</a></li>
+              <li><a href="#">Giày</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Thời trang nữ</a>
+            <ul class="submenu">
+              <li><a href="#">Áo</a></li>
+              <li><a href="#">Quần</a></li>
+              <li><a href="#">Phụ kiện</a></li>
+              <li><a href="#">Giày</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Sản phẩm bán chạy</a>
+            <ul class="submenu">
+              <li><a href="#">Áo</a></li>
+              <li><a href="#">Quần</a></li>
+              <li><a href="#">Phụ kiện</a></li>
+              <li><a href="#">Giày</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Tin thời trang</a>
+            <ul class="submenu">
+              <li><a href="#" class="waves-effect">Thương hiệu</a></li>
+              <li><a href="#" class="waves-effect">Làm đẹp</a></li>
+              <li><a href="#" class="waves-effect">Sức khỏe</a></li>
+              <li><a href="#" class="waves-effect">Xu hướng</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+  </header>
+  <section class="section-wrap">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col s12 m12 l2 xl2 hide-on-med-and-down sidebar">
+          <h2>Tin thời trang</h2>
+          <div class="product-nav attribute-nav">
+            <div class="product-nav-item">
+              <div class="product-nav-item-head">
+                <a href="#">Tin thương hiệu</a>
+                <a href="#">Làm đẹp</a>
+                <a href="#">Sức khỏe</a>
+                <a href="#">Xu hướng</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m12 l10 xl10">
+          <div class="category-product-title page-top">
+            <div class="row">
+              <div class="col s12 m8 l10 xl10">
+                <nav itemscope itemtype="http://schema.org/BreadcrumbList">
+                  <div class="nav-wrapper">
+                    <a href="#" class="breadcrumb" itemprop="itemListElement" itemscope
+                        itemtype="http://schema.org/ListItem">
+                      <span itemprop="name">Tin thời trang</span></a>
+                      <meta itemprop="position" content="1" />
+                    </a>
+                    <a href="#" class="breadcrumb" itemprop="itemListElement" itemscope
+                        itemtype="http://schema.org/ListItem">
+                      <span itemprop="name">Thương hiệu</span></a>
+                      <meta itemprop="position" content="2" />
+                    </a>
+                  </div>
+                </nav>
+                <h1 class="category-title">GAUDI</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m7 l8 xl8">
+            <div class="row">
+              <div class="col s12">
+                <div class="news-item first-news">
+                  <a href="#" class="thumb"><img src="https://unsplash.it/690/405?image=125" alt=""></a>
+                  <div class="title">
+                    <h5>FALL-WINTER 16/17 MAN COLLECTION</h5>
+                    <a href="#" class="viewmore">Đọc thêm</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 m6 l6 xl6">
+                <div class="news-item">
+                  <a href="#" class="thumb"><img src="https://unsplash.it/690/405?image=678" alt=""></a>
+                  <div class="title">
+                    <h5>FALL-WINTER 16/17 MAN COLLECTION</h5>
+                    <a href="#" class="viewmore">Đọc thêm</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6 l6 xl6">
+                <div class="news-item">
+                  <a href="#" class="thumb"><img src="https://unsplash.it/690/405?image=525" alt=""></a>
+                  <div class="title">
+                    <h5>FALL-WINTER 16/17 MAN COLLECTION</h5>
+                    <a href="#" class="viewmore">Đọc thêm</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6 l6 xl6">
+                <div class="news-item">
+                  <a href="#" class="thumb"><img src="https://unsplash.it/690/405?image=425" alt=""></a>
+                  <div class="title">
+                    <h5>FALL-WINTER 16/17 MAN COLLECTION</h5>
+                    <a href="#" class="viewmore">Đọc thêm</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6 l6 xl6">
+                <div class="news-item">
+                  <a href="#" class="thumb"><img src="https://unsplash.it/690/405?image=765" alt=""></a>
+                  <div class="title">
+                    <h5>FALL-WINTER 16/17 MAN COLLECTION</h5>
+                    <a href="#" class="viewmore">Đọc thêm</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <ul class="pagination">
+                  <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                  <li class="active"><a href="#!">1</a></li>
+                  <li class="waves-effect"><a href="#!">2</a></li>
+                  <li class="waves-effect"><a href="#!">3</a></li>
+                  <li class="waves-effect"><a href="#!">4</a></li>
+                  <li class="waves-effect"><a href="#!">5</a></li>
+                  <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m5 l4 xl4">
+            <div class="news-sidebar">
+              <div class="news-sidebar-item popular-posts">
+                <h3>Bài được xem nhiều nhất</h3>
+                <ul>
+                  <li>
+                    <a href="#" class="thumb"><img src="https://unsplash.it/100/100?image=200" alt=""></a>
+                    <div class="title">
+                      <a href="#">Mẹo bảo quản giày và túi xách mùa nắng nóng</a>
+                      <time>Tue - 04/2017</time>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="thumb"><img src="https://unsplash.it/100/100?image=240" alt=""></a>
+                    <div class="title">
+                      <a href="#">Mẹo bảo quản giày và túi xách mùa nắng nóng</a>
+                      <time>Tue - 04/2017</time>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="thumb"><img src="https://unsplash.it/100/100?image=310" alt=""></a>
+                    <div class="title">
+                      <a href="#">Mẹo bảo quản giày và túi xách mùa nắng nóng</a>
+                      <time>Tue - 04/2017</time>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="thumb"><img src="https://unsplash.it/100/100?image=400" alt=""></a>
+                    <div class="title">
+                      <a href="#">Mẹo bảo quản giày và túi xách mùa nắng nóng</a>
+                      <time>Tue - 04/2017</time>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="thumb"><img src="https://unsplash.it/100/100?image=500" alt=""></a>
+                    <div class="title">
+                      <a href="#">Mẹo bảo quản giày và túi xách mùa nắng nóng</a>
+                      <time>Tue - 04/2017</time>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-wrap brand-logo">
+    <div class="">
+        <div class="brand-item">
+          <a href="#"><img src="img/cucinelli.svg" alt=""></a>
+        </div>
+        <div class="brand-item">
+          <a href="#"><img src="img/gaudi.svg" alt=""></a>
+        </div>
+        <div class="brand-item">
+          <a href="#"><img src="img/laperla.svg" alt=""></a>
+        </div>
+        <div class="brand-item">
+          <a href="#"><img src="img/tombolini.svg" alt=""></a>
+        </div>
+    </div>
+  </section>
+  <footer>
+    <div class="row">
+      <div class="col s12 m6 l2 xl2">
+        <div class="footer-item showroom">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              Showroom
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <ul>
+              <li>Tầng 1&amp;2: Cafe Rita Võ - 211 Nguyễn Văn Cừ, P3, Q.5, Tp.HCM</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l2 xl2">
+        <div class="footer-item support">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              Hỗ trợ khách hàng
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <ul>
+              <li><a href="#">Hướng dẫn mua hàng</a></li>
+              <li><a href="#">Chính sách giao hàng</a></li>
+              <li><a href="#">Quy định đổi trả</a></li>
+              <li><a href="#">Hướng dẫn bảo quản</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3 xl3">
+        <div class="footer-item subscribe">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              Nhận thông tin khuyến mãi
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <p>Đăng ký để nhận thông tin khuyến mãi</p>
+            <form action="">
+              <input type="email" name="your-mail">
+              <input type="submit" value="Đăng ký">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3 xl3">
+        <div class="footer-item info">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              CÔNG TY TNHH RITAVÕ (RITAVO CO., LTD)
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <p>
+              5A Đường Số 3 Phường An Phú, Quận 2 TPHCM <br>
+              Số giấy chứng nhận đăng ký kinh doanh: 0302802627 do Sở kế hoạch và đầu tư TP. Hồ Chí Minh cấp lần đầu ngày 05/12/2002, thay đổi lần thứ 23 ngày 14/12/2015
+            </p>
+            <p>Người đại diện: Ông Võ Mậu Quốc Duy</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m12 l2 xl2">
+        <div class="footer-item connect">
+          <div class="footer-item-wrap">
+            <h3 class="footer-item-title">
+              CONNECT WITH US
+            </h3>
+          </div>
+          <div class="footer-item-content">
+            <ul class="social">
+              <li><a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+              <li><a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="col s12">
+        <p class="center-align">&copy;2017 RITAVO.OUTLET.COM All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <div class="fixed-action-btn click-to-toggle hide-on-large-only">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">settings</i>
+    </a>
+    <ul>
+      <li><a data-activates="slide-filter-nav" class="button-collapse btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">shopping_basket</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+    </ul>
+  </div>
+  <!-- Begin Sidenav Filter -->
+  <div id="slide-filter-nav" class="side-nav sidebar">
+    <h2><small>Lọc sản phẩm</small>Thời trang nam</h2>
+    <div class="product-nav category-nav">
+      <div class="product-nav-item">
+        <div class="product-nav-item-head">
+          <a  href="#" class="product-nav-item-title">Áo</a>
+          <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-1" aria-expanded="false" data-target="sideNav-item-1">
+            <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+          </a>
+        </div>
+        <div class="product-nav-content collapse in" id="sideNav-item-1">
+          <ul>
+            <li><a href="#">Áo khoác/ vest</a></li>
+            <li><a href="#">Áo ấm</a></li>
+            <li><a href="#">Áo da</a></li>
+            <li><a href="#">Áo khoác mỏng</a></li>
+            <li><a href="#">Áo len</a></li>
+            <li><a href="#">Áo thun</a></li>
+            <li><a href="#">Áo sơ mi</a></li>
+            <li><a href="#">Áo ghi – lê</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="product-nav-item">
+        <div class="product-nav-item-head">
+          <a  href="#" class="product-nav-item-title">Quần</a>
+          <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-2" aria-expanded="false" data-target="sideNav-item-2">
+            <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+          </a>
+        </div>
+        <div class="product-nav-content collapse in" id="sideNav-item-2">
+          <ul>
+            <li><a href="#">Quần jeans</a></li>
+            <li><a href="#">Quần khaki</a></li>
+            <li><a href="#">Quần vải</a></li>
+            <li><a href="#">Quần short</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="product-nav-item">
+        <div class="product-nav-item-head">
+          <a  href="#" class="product-nav-item-title">Phụ kiện</a>
+          <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-3" aria-expanded="false" data-target="sideNav-item-3">
+            <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+          </a>
+        </div>
+        <div class="product-nav-content collapse in" id="sideNav-item-3">
+          <ul>
+            <li><a href="#">Ba lo</a></li>
+            <li><a href="#">Túi xách</a></li>
+            <li><a href="#">Ví</a></li>
+            <li><a href="#">Ví ngắn</a></li>
+            <li><a href="#">Ví dài</a></li>
+            <li><a href="#">Khăn choàng cổ</a></li>
+            <li><a href="#">Thắt lưng</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="product-nav-item">
+        <div class="product-nav-item-head">
+          <a  href="#" class="product-nav-item-title">Giày</a>
+          <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-4" aria-expanded="false" data-target="sideNav-item-4">
+            <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+          </a>
+        </div>
+        <div class="product-nav-content collapse in" id="sideNav-item-4">
+          <ul>
+            <li><a href="#">Giày thể thao/ sneaker</a></li>
+            <li><a href="#">Giày mọi</a></li>
+            <li><a href="#">Dép</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="product-nav attribute-nav">
+      <div class="product-nav-item">
+        <div class="product-nav-item-head">
+          <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-5" aria-expanded="false" data-target="sideNav-item-5">
+            Thương hiệu <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+          </a>
+        </div>
+        <div class="product-nav-content collapse in" id="sideNav-item-5">
+          <ul>
+            <li><a href="#">GAUDI</a></li>
+            <li><a href="#">TOMBOLINI</a></li>
+            <li><a href="#">LA PERLA</a></li>
+            <li><a href="#">BRUNELLO CUCINELLI</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="product-nav attribute-nav">
+      <div class="product-nav-item">
+        <div class="product-nav-item-head">
+          <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-6" aria-expanded="false" data-target="sideNav-item-6">
+            Kích cỡ <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+          </a>
+        </div>
+        <div class="product-nav-content collapse in" id="sideNav-item-6">
+          <ul class="product-size">
+            <li class="active"><a href="#">S</a></li>
+            <li><a href="#">M</a></li>
+            <li><a href="#">L</a></li>
+            <li><a href="#">XL</a></li>
+            <li><a href="#">XXL</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="product-nav attribute-nav">
+      <div class="product-nav-item">
+        <div class="product-nav-item-head">
+          <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-7" aria-expanded="false" data-target="sideNav-item-7">
+            Màu sắc <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+          </a>
+        </div>
+        <div class="product-nav-content collapse in" id="sideNav-item-7">
+          <ul class="product-color">
+            <li><a href="#" style="background:red">Red</a></li>
+            <li><a href="#" style="background:green">green</a></li>
+            <li><a href="#" style="background:blue">blue</a></li>
+            <li><a href="#" style="background:yellow">yellow</a></li>
+            <li><a href="#" style="background:black">black</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="product-nav attribute-nav">
+      <div class="product-nav-item">
+        <div class="product-nav-item-head">
+          <a class="toggle-btn" role="button" data-toggle="collapse" href="#item-8" aria-expanded="false" data-target="sideNav-item-8">
+            Giá <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+          </a>
+        </div>
+        <div class="product-nav-content collapse in" id="sideNav-item-8">
+          <ul class="product-price-range">
+            <li class="active"><a href="#">Từ 1 - 3 triệu</a></li>
+            <li><a href="#">Từ 3 - 7 triệu</a></li>
+            <li><a href="#">Từ 7 - 10 triệu</a></li>
+            <li><a href="#">Từ 10 - 15 triệu</a></li>
+            <li><a href="#">Trên 15 triệu</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Sidenav Filter -->
+</body>
+<script src="js/jquery.flexslider-min.js" charset="utf-8"></script>
+<script src="js/lightbox.min.js" charset="utf-8"></script>
+</html>
